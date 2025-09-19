@@ -170,7 +170,7 @@ Include screenshots in `/screenshots` and add them here:
 - `screenshots/admin-dashboard.png` — dashboard
 - `screenshots/sweet-form.png` — sweet detail modal
 - `screenshots/login.png` — login
-- `screenshots/registration.png` — login
+- `screenshots/registration.png` — registration
 
 ---
 
