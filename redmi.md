@@ -179,8 +179,6 @@ I used AI assistance from ChatGPT (OpenAI) and Gemini (Google) to:
 - Generate a polished, structured README template and example scripts.
 - Draft API reference and sample environment variable files.
 
-AI helped speed up writing the README content and provided ideas for structure and testing. (If this repo is submitted for any course or evaluation check your instructor rules before using AI-generated text; attribute where required.)
-
 ---
 
 ## 🛠️ Scripts (recommended in package.json)
