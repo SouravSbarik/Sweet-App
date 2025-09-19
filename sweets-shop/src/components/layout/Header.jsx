@@ -10,7 +10,7 @@ const { user, logout } = useAuth();
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         
         {/* Brand */}
-        <h1 className="text-2xl sm:text-4xl outline-2 rounded-tr-2xl rounded-bl-2xl outline-amber-500 px-4 py-2 font-bold text-white font-serif">
+        <h1 className="text-2xl sm:text-4xl outline-2 rounded-tr-2xl rounded-bl-2xl outline-amber-500 px-4 py-2 font-bold text-amber-500 font-serif">
           Sweetify
         </h1>
 
