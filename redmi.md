@@ -143,17 +143,17 @@ Add the generated test report output or screenshots to this README in the `./scr
 
 ---
 
-## ⚙️ Admin Setup & Seeding
+## ⚙️ Admin Setup
 
-To create an initial admin user quickly, either:
-1. Use an API route `POST /api/auth/register` then update the user role to `admin` in MongoDB.
-2. Add a seed script `sweets-api/seedAdmin.js` that creates an admin user when run. Example:
+To create an initial **admin user**, simply:
 
-```bash
-node seedAdmin.js
-```
+1. Start the backend and frontend.
+2. Go to the **Register form** in the frontend.
+3. Fill in details (username, email, password) and **select the role as Admin**.
+4. Submit the form — the backend will register this account with `role: 'admin'`.
 
-Seed script should read `MONGO_URI` from `.env` and create a user with `{ username: 'admin', email: 'admin@example.com', password: 'password', role: 'admin' }`.
+This user can now log in via `POST /api/auth/login` and will have admin privileges (add/update/delete sweets, restock inventory).
+
 
 ---
 
@@ -165,12 +165,8 @@ Include screenshots in `/screenshots` and add them here:
 - `screenshots/admin-dashboard.png` — dashboard
 - `screenshots/sweet-form.png` — sweet detail modal
 - `screenshots/login.png` — login
+- `screenshots/registration.png` — login
 
-Add images like:
-
-```markdown
-![Home](/screenshots/user-home.png)
-```
 
 ---
 
