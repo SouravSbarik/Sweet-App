@@ -7,7 +7,7 @@ export const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('user'); // default role
+  const [role, setRole] = useState('user');
   const { login, register, error, loading } = useAuth();
 
   const handleSubmit = async (e) => {

@@ -1,5 +1,6 @@
 import Sweet from '../models/sweetModel.js';
 
+// Adds a new sweet
 export const addSweet = async (req, res) => {
   const { name, category, price, quantity } = req.body;
   try {
@@ -11,6 +12,7 @@ export const addSweet = async (req, res) => {
   }
 };
 
+// Fetches all sweets
 export const getAllSweets = async (req, res) => {
   try {
     const sweets = await Sweet.find({});
@@ -20,6 +22,7 @@ export const getAllSweets = async (req, res) => {
   }
 };
 
+// Updates a sweet by ID
 export const updateSweet = async (req, res) => {
   const { name, category, price, quantity } = req.body;
   try {
@@ -39,6 +42,7 @@ export const updateSweet = async (req, res) => {
   }
 };
 
+// Deletes a sweet by ID
 export const deleteSweet = async (req, res) => {
   try {
     const sweet = await Sweet.findById(req.params.id);
@@ -53,6 +57,7 @@ export const deleteSweet = async (req, res) => {
   }
 };
 
+// Searches sweets by filters
 export const searchSweets = async (req, res) => {
   const { name, category, minPrice, maxPrice } = req.query;
   const query = {};
@@ -71,6 +76,7 @@ export const searchSweets = async (req, res) => {
   }
 };
 
+// Handles sweet purchase (reduces quantity by 1)
 export const purchaseSweet = async (req, res) => {
   try {
     const sweet = await Sweet.findById(req.params.id);
@@ -89,6 +95,7 @@ export const purchaseSweet = async (req, res) => {
   }
 };
 
+// Restocks a sweet by given amount
 export const restockSweet = async (req, res) => {
   const { amount } = req.body;
   try {

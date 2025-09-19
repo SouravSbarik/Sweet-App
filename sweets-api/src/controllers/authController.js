@@ -1,12 +1,14 @@
 import User from '../models/userModel.js';
 import jwt from 'jsonwebtoken';
 
+// Creates a JWT token for a user
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: '10h',
   });
 };
 
+// Handles new user registration
 export const registerUser = async (req, res) => {
   const { username, password, role } = req.body;
 
@@ -40,7 +42,7 @@ export const registerUser = async (req, res) => {
   }
 };
 
-
+// Handles user login
 export const loginUser = async (req, res) => {
   const { username, password } = req.body;
   try {
