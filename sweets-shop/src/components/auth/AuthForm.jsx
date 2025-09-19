@@ -7,18 +7,21 @@ export const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [role, setRole] = useState('user'); // default role
   const { login, register, error, loading } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const credentials = { username, password };  // wrap them into an object
+    const credentials = isLogin 
+      ? { username, password } 
+      : { username, password, role };  // include role for register
+
     if (isLogin) {
       await login(credentials);
     } else {
       await register(credentials);
     }
   };
-  
 
   return (
     <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg">
@@ -58,6 +61,23 @@ export const AuthForm = () => {
             required
           />
         </div>
+
+        {/* Role selector only for Register */}
+        {!isLogin && (
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">Select Role</label>
+            <select
+              value={role}
+              onChange={(e) => setRole(e.target.value)}
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-pink-400 focus:border-transparent transition"
+              required
+            >
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+        )}
+
         <button
           type="submit"
           disabled={loading}
@@ -78,4 +98,3 @@ export const AuthForm = () => {
     </div>
   );
 };
-
