@@ -14,6 +14,11 @@ This project contains two folders at the repo root:
 Both folders include a `.env.example` file — copy it to `.env` and fill values before running.
 
 ---
+## ✨ Deployment
+
+The project is live here:  
+👉 [Sweets APP](https://sweet-app-rust.vercel.app/)
+---
 
 ## 🚀 Quick Start
 
@@ -167,20 +172,18 @@ Include screenshots in `/screenshots` and add them here:
 - `screenshots/login.png` — login
 - `screenshots/registration.png` — login
 
-
----
-## 🚀 Deployment
-
-The project is live here:  
-👉 [Sweets APP Deployment](https://sweet-app-rust.vercel.app/)
-
 ---
 
-## 🧾 My AI Usage
+## 🧾 My AI Usage  
 
-I used AI assistance from ChatGPT (OpenAI) and Gemini (Google) to:
-- Generate a polished, structured README template and example scripts.
-- Draft API reference and sample environment variable files.
+I used AI assistance from **ChatGPT (OpenAI)** and **Gemini (Google)** to:  
+- Generate a structured and polished **README template**.  
+- Draft **API reference docs** and **sample environment variable files**.  
+- Help with **frontend structure**, context file setup, and component organization.  
+- Assist in **API handling**, **error handling**, and **API structure design**.  
+- Provide guidance for **database model creation**.  
+
+All outputs were reviewed, tested, and adapted by me before inclusion in the project.
 
 ---
 
@@ -213,7 +216,7 @@ I used AI assistance from ChatGPT (OpenAI) and Gemini (Google) to:
 
 ## 🧭 Postman / API Collection
 
-Include a Postman collection (or `insomnia` file) named `sweets_api_postman_collection.json` at the repo root containing sample requests for: register, login, create sweet, list sweets, search sweets, purchase, restock. This makes manual testing quick for reviewers.
+Include a Postman collection named `sweets_api_postman_collection.json` at the repo root containing sample requests for: register, login, create sweet, list sweets, search sweets, purchase, restock. This makes manual testing quick for reviewers.
 
 ---
 
