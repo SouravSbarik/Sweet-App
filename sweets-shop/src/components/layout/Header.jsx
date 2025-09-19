@@ -6,7 +6,7 @@ export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 const { user, logout } = useAuth();
   return (
-    <header className="bg-blue-100/50 shadow-sm sticky top-0 z-40">
+    <header className="bg-blue-100 shadow-sm sticky top-0 z-40">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         
         {/* Brand */}

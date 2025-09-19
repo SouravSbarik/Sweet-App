@@ -169,7 +169,10 @@ Include screenshots in `/screenshots` and add them here:
 
 
 ---
+## 🚀 Deployment
 
+The project is live here:  
+👉 [Sweets APP Deployment](https://sweet-app-rust.vercel.app/)
 
 ---
 
